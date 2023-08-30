@@ -13,4 +13,8 @@ narrative-nexus
 
 ng new narrative-nexus
 
-git remote add origin https://github.com/PSesharao/narrative-nexus.git
+npm i bootstrap bootstrap-icons 
+
+ng g c home
+
+ng g c gpt
