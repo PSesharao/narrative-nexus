@@ -1,0 +1,16 @@
+https://github.com/learnsmartcoding/ai-chat-bot-app-in-angular-using-chatGPT
+
+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
+
+please suggest the better project name ideas on the topic 'Angular-openAI API '
+
+
+notes-narrative-nexus
+
+Narrative Nexus :  OpenAI API Integration with Angular
+
+narrative-nexus
+
+ng new narrative-nexus
+
+git remote add origin https://github.com/PSesharao/narrative-nexus.git
