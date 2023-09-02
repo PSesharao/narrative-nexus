@@ -18,3 +18,4 @@ npm i bootstrap bootstrap-icons
 ng g c home
 
 ng g c gpt
+

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +15,16 @@ export class AppComponent {
   ]
 
   title = 'narrative-nexus';
+
+  currentAction : any ; 
+
+  constructor(private router : Router){
+
+  }
+
+  handleRoute(action : any ) {
+    this.currentAction = action ; 
+    this.router.navigateByUrl(action.route ) ; 
+  }
+
 }

@@ -1,1 +1,32 @@
-<p>gpt works!</p>
+<div class="p-3">
+    <div class="card">
+        <div class="card-body">
+            <form [formGroup]="queryformGroup" (ngSubmit)="handleAskGPT()">
+                <div class="mb-3">
+                    <label class="form-label">
+                        Query :
+                    </label>
+                    <textarea formControlName="query" class="form-control"></textarea>
+                </div>
+
+                <button class="btn btn-success">Ask GPT</button>
+            </form>
+
+            <div class="alert alert-success" *ngIf="!( this.result === null || this.result === undefined ) ; 
+            else elseBlock">
+                <pre>
+                    {{result | json }}
+                </pre>
+            </div>
+
+            <ng-template #elseBlock>
+                <div class="alert alert-danger">
+                    <pre>
+                        {{error}}
+                    </pre>
+                </div>
+             </ng-template>
+            
+        </div>
+    </div>
+</div>
