@@ -1,4 +1,4 @@
-# narrative-nexus - OpenAI API Integration with Angular
+# Narrative Nexus - OpenAI API Integration with Angular
 
 ![GitHub License](https://img.shields.io/github/license/PSesharao/narrative-nexus)
 ![GitHub Stars](https://img.shields.io/github/stars/PSesharao/narrative-nexus)
@@ -13,6 +13,39 @@ This Angular application, "narrative-nexus," is designed to demonstrate the inte
 - Query OpenAI API with user-provided input.
 - Display responses from the OpenAI API in a user-friendly format.
 - Secure authentication using an API key.
+
+## Project Overview
+
+1. Get your API key here
+
+![API key](api-responses/api_key.png)
+
+2. Your API Key should be valid and active
+
+![Valid API key](api-responses/active_limits.png)
+
+3. Home Page
+
+![Home Page](api-responses/home_page.png)
+
+4. Hi Assistant Response
+
+![Hi Assistant Response](api-responses/hi_query_success.png)
+
+5. Open AI query Response
+
+![Open AI query Response](api-responses/open_ai_query_success.png)
+
+6. Invalid API key Response
+
+![Invalid API key Response](api-responses/invalid_api_key.png)
+
+7. Quota Expired Response
+![Quota Expired Response](api-responses/quota_expired_response.png)
+
+
+8. Network Response
+![Network Response](api-responses/network_response.png)
 
 ## Prerequisites
 
