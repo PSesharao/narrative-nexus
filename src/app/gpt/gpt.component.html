@@ -1,32 +1,45 @@
 <div class="p-3">
     <div class="card">
-        <div class="card-body">
-            <form [formGroup]="queryformGroup" (ngSubmit)="handleAskGPT()">
-                <div class="mb-3">
-                    <label class="form-label">
-                        Query :
-                    </label>
-                    <textarea formControlName="query" class="form-control"></textarea>
-                </div>
-
-                <button class="btn btn-success">Ask GPT</button>
-            </form>
-
-            <div class="alert alert-success" *ngIf="!( this.result === null || this.result === undefined ) ; 
-            else elseBlock">
-                <pre>
-                    {{result | json }}
-                </pre>
-            </div>
-
-            <ng-template #elseBlock>
-                <div class="alert alert-danger">
-                    <pre>
-                        {{error}}
-                    </pre>
-                </div>
-             </ng-template>
-            
+      <div class="card-body">
+        <form [formGroup]="queryformGroup" (ngSubmit)="handleAskGPT()">
+          <div class="mb-3">
+            <label class="form-label">
+              Query :
+            </label>
+            <textarea formControlName="query" class="form-control"></textarea>
+          </div>
+  
+          <button class="btn btn-success">Ask GPT</button>
+        </form>
+  
+        <div class="alert alert-success m-3" *ngIf="result !== null && result !== undefined; else elseBlock">
+          <!-- <pre>{{ result | json }}</pre> -->
+          <ul class="list-group">
+            <li class="list-group-item" *ngFor="let choice of result.choices">
+                {{choice.message.content}}
+            </li>
+          </ul>
         </div>
+  
+        <ng-template #elseBlock>
+          <div class="alert alert-danger m-3" *ngIf="error !== null && error !== undefined; else noAlertBlock">
+            <!-- <pre>
+              {{ error }}
+            </pre> -->
+
+            <ul class="list-group">
+                <li class="list-group-item" >
+                    {{ error }}
+                </li>
+              </ul>
+          </div>
+          
+          <ng-template #noAlertBlock>
+            <!-- This block will be shown when neither success nor error is present -->
+          </ng-template>
+        </ng-template>
+  
+      </div>
     </div>
-</div>
+  </div>
+  

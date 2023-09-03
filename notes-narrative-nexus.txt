@@ -1,6 +1,9 @@
 https://github.com/learnsmartcoding/ai-chat-bot-app-in-angular-using-chatGPT
 
-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
+
+expired : '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'
+
+valid :  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
 
 please suggest the better project name ideas on the topic 'Angular-openAI API '
 
@@ -18,4 +21,5 @@ npm i bootstrap bootstrap-icons
 ng g c home
 
 ng g c gpt
+
 
