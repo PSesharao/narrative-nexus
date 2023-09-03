@@ -14,7 +14,7 @@ export class GptService {
 
   askGPT(message : any ) {
     const url = environment.apiUrl; // Use the apiUrl from the environment
-    const httpHeaders = new HttpHeaders().set('Authorization', `Bearer ${environment.apiKey}`); // Use the apiKey from the environment
+    const httpHeaders = new HttpHeaders().set('Authorization', `Bearer ${environment.apiKey_invalid}`); // Use the apiKey from the environment
     this.messages.push(message)
     const payload = {
       model: 'gpt-3.5-turbo',
